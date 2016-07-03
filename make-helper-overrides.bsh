@@ -31,6 +31,9 @@ make_install() {
    local systemd_unit_file_target
 
    for systemd_unit_file_target in "$DESTDIR/lib/systemd/system/"*; do
+      if ! echo "$systemd_unit_file_target" | grep "corridor-"; then
+         continue
+      fi
       sed -i "s|SBIN|/usr/sbin|g" "$systemd_unit_file_target"
    done
 }
