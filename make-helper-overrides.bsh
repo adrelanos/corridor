@@ -1,0 +1,22 @@
+#!/bin/bash
+
+## This file is part of Whonix.
+## Copyright (C) 2012 - 2016 Patrick Schleizer <adrelanos@riseup.net>
+## See the file COPYING for copying conditions.
+
+make_helper() {
+   echo "Not implemented!" >&2
+   exit 1
+}
+
+make_install() {
+   make_function_run make_get_destdir
+
+   mkdir -p "$DESTDIR/usr/sbin/"
+   mkdir -p "$DESTDIR/etc/corridor.d"
+   mkdir -p "$DESTDIR/lib/systemd/system/"
+
+   cp corridor-* "$DESTDIR/usr/sbin/"
+   cp corridor.d/* "$DESTDIR/etc/corridor.d/"
+   cp systemd/* "$DESTDIR/lib/systemd/system/"
+}

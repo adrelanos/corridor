@@ -7,14 +7,11 @@
 #export DH_VERBOSE=1
 
 %:
-	dh $@
+	dh $@ --with systemd
 
 #override_dh_install:
-	#dh_installinit --onlyscripts
-	#$(CURDIR)/build-scripts/man-helper.bsh
+	#make manpages
 	#dh_installman $(CURDIR)/debian/tmp-man/*
 
-clean:
-	make clean
-
-.PHONY: clean build
+override_dh_installchangelogs:
+	dh_installchangelogs changelog.upstream upstream

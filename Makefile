@@ -1,24 +1,18 @@
-PREFIX = /usr/local
-SBIN   = $(PREFIX)/sbin
-SYSTEM = $(PREFIX)/lib/systemd/system
+#!/usr/bin/make -f
 
-UNITS = systemd/corridor-data.service \
-        systemd/corridor-init-forwarding.service \
-        systemd/corridor-init-logged.service \
-        systemd/corridor-init-snat.service \
-        systemd/corridor.target
+## Copyright (C) 2012 - 2014 Patrick Schleizer <adrelanos@riseup.net>
+## See the file COPYING for copying conditions.
 
-systemd-units: $(UNITS)
+## genmkfile - Makefile - version 1.5
 
-%.service: %.service.in
-	sed 's:SBIN/:$(SBIN)/:' $< >$@
+## This is a copy.
+## master location:
+## https://github.com/Whonix/genmkfile/blob/master/usr/share/genmkfile/Makefile
 
-install: systemd-units
-	install -d $(DESTDIR)$(SBIN) $(DESTDIR)/etc/corridor.d $(DESTDIR)/var/lib/corridor
-	install corridor-data corridor-init* corridor-load-ipset* $(DESTDIR)$(SBIN)
-	install -m 644 corridor-load-config $(DESTDIR)$(SBIN)
-	install -m 644 corridor.d/* $(DESTDIR)/etc/corridor.d
-	if pkg-config systemd; then install -d $(DESTDIR)$(SYSTEM) && install -m 644 $(UNITS) $(DESTDIR)$(SYSTEM); fi
+GENMKFILE_PATH ?= /usr/share/genmkfile
+GENMKFILE_ROOT_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 
-clean:
-	rm -f systemd/*.service
+export GENMKFILE_PATH
+export GENMKFILE_ROOT_DIR
+
+include $(GENMKFILE_PATH)/makefile-full

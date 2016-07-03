@@ -1,20 +1,21 @@
 ## This file is part of Whonix.
-## Copyright (C) 2012 - 2014 Patrick Schleizer <adrelanos@riseup.net>
+## Copyright (C) 2012 - 2016 Patrick Schleizer <adrelanos@riseup.net>
 ## See the file COPYING for copying conditions.
 
 Source: corridor
 Section: misc
 Priority: optional
 Maintainer: Patrick Schleizer <adrelanos@riseup.net>
-Build-Depends: debhelper (>= 8), faketime, git,
+Build-Depends: debhelper (>= 9), faketime, genmkfile, ruby-ronn (>= 0.7.3),
+ dh-systemd
 Homepage: https://github.com/rustybird/corridor
 Vcs-Browser: https://github.com/rustybird/corridor
 Vcs-Git: https://github.com/rustybird/corridor.git
-Standards-Version: 3.9.4
+Standards-Version: 3.9.6
 
 Package: corridor
 Architecture: all
-Depends:  ${misc:Depends}
+Depends: ipset, socat, tor, ${misc:Depends}
 Description: Tor traffic whitelisting gateway
  There are several transparently torifying gateways. They suffer from the same
  problems:

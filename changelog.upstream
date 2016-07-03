@@ -1,0 +1,423 @@
+commit 03a8a08c37cb307801ddf3395e75c631cebcf428
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jul 3 18:01:23 2016 +0200
+
+    old debian folder
+
+commit d357f77409cd1b1bf69cf767df4761345e924cc0
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Thu Jun 30 16:13:47 2016 +0000
+
+    Order corridor-init-forwarding before network-pre.target
+
+commit d925e913061960ec28b6b8a636167025b4089aa2
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Fri Jun 24 13:07:00 2016 +0000
+
+    Save relays list from consensus to disk
+    
+    Can usually avoid a deadlock during startup when the control port is on
+    a client computer.
+
+commit 65ea32218797062c0d6fb391085b3ff0135bb999
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Fri Jun 24 13:06:59 2016 +0000
+
+    Remove whitespace and dedup sooner
+
+commit df5dc8914687f82f6ffd40da4c5bb0f0dd44217e
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Thu May 5 07:49:40 2016 +0000
+
+    Rework systemd units to avoid ordering cycles
+
+commit 46dd48dab65309e89e6a70b1138f80df7e5eb03b
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Thu May 5 07:49:40 2016 +0000
+
+    Wait for xtables lock
+
+commit 24a1a7753dac4e9654eb677b941a57c9eeaaf3a1
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Thu May 5 07:49:40 2016 +0000
+
+    Document DirPort
+
+commit 2c6909620279e54fb7c5968c37f4409fd1e9bcac
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Thu May 5 07:49:39 2016 +0000
+
+    Add blank line
+
+commit 6750969773250c5b1e8e87f14cefa46b1bc3951c
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Fri Feb 5 21:39:48 2016 +0000
+
+    Miscopied variable name made last commit ineffective
+
+commit a56d751df399ab1c54f64b0d4dc59f732dc0adc3
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Fri Feb 5 19:15:05 2016 +0000
+
+    Fix connection errors for clients' first consensus download
+    
+    Clients download their first ever consensus from a hardcoded list of
+    directory authorities. But these authorities are hardcoded under
+    different IP:port addresses than what they publish about themselves in
+    the consensus.
+
+commit dd9fe955329d594f38b3f8ea0f34dead0738c771
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Fri Feb 5 19:15:05 2016 +0000
+
+    Indent multiline $RELAYS variable
+
+commit 0bff4520bdcdcb9a9cb0abe1631cb55384a4ae94
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Fri Feb 5 19:15:04 2016 +0000
+
+    Add *.service files (built by make) to .gitignore
+
+commit cb9279217b9842ecbcd1f42d94180185dab94545
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Wed Dec 2 09:37:12 2015 +0000
+
+    Don't fail if /etc/corridor.d doesn't exist or is empty
+
+commit 612bbcaea71975ddf69b319922805b3472335365
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Wed Dec 2 09:37:12 2015 +0000
+
+    Remove misleading hashbang and exe bit from corridor-load-config
+    
+    corridor-load-config is intended to be sourced (man 1p dot)
+
+commit 9c7c1761d0283439bfc4790d3f656df4d45b702a
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Nov 29 21:43:30 2015 +0000
+
+    only source configuration files ending with .conf
+
+commit 83ab7b7080cc6ad88ae7cfdefa1df4e15d280f49
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Mon Nov 30 13:07:29 2015 +0000
+
+    Rename corridor.d/* to corridor.d/*.conf
+
+commit ec26ef5a45b73201cd5736582efa0f33a9ad59b0
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Fri Feb 6 14:49:54 2015 +0000
+
+    Wrap LICENSE at 72 characters per line
+
+commit 76ec2ee8f21a941a120eed30371ed15823c48d58
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Fri Feb 6 14:11:51 2015 +0000
+
+    Permissive license, fixes #1
+
+commit 1d238ea7abac44a15e766792fc5c77a9355358e6
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Fri Feb 6 14:11:50 2015 +0000
+
+    Stronger warning due to "GETINFO address"
+
+commit 9f2e30a485289000dcd9525770a63ea212a3e2d5
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Fri Feb 6 14:11:50 2015 +0000
+
+    Safety, not security
+
+commit d5eb77629218d30acf9bd908ac1d2d36ebe45c48
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Wed Jun 11 13:08:42 2014 +0000
+
+    Hook the CORRIDOR chain later, when it has been built
+
+commit 54bc5759ed3a0f442333a354d658915a72401276
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Tue Jun 3 20:16:47 2014 +0000
+
+    Fix the documentation: Work around systemd bug https://bugs.freedesktop.org/show_bug.cgi?id=75104
+
+commit 6c3fb1fa1b27419b4a2f40ee2d0526e30bbb595c
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Tue Jun 3 10:38:40 2014 +0000
+
+    Fix the documentation: "Usage" is a subheadline
+
+commit bbe1f000cab39a432cbc1c774312cc9f11711dc0
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Tue Jun 3 10:32:51 2014 +0000
+
+    Add systemd units
+
+commit 795c6d38d0f0550b01a849d4457a1fc2316f84cf
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Tue Jun 3 10:32:50 2014 +0000
+
+    Split "Example usage" into "Installation" and "Usage"
+
+commit 28211d8c8577fa920f0dfb41d29d78be99123e8c
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sun Jun 1 19:14:37 2014 +0000
+
+    Fix errors on empty $SNAT or empty $LOGGED
+
+commit 8cb5105df6ca525217d7919afb7b7418822a8b90
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sun Jun 1 19:14:37 2014 +0000
+
+    Work around Debian
+
+commit 574fd3f05d72e871247e370bd0097f833bff76fd
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sun Jun 1 19:14:37 2014 +0000
+
+    Move a comment
+
+commit f4de0f28f7d5ca6249d7abc5a6d2f78c46e63238
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sun Jun 1 19:14:36 2014 +0000
+
+    Fix the documentation: make is another dependency
+
+commit a66fcfea221012bf7e686d7482f3526b671dc9f6
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sun Jun 1 16:10:45 2014 +0000
+
+    Fix the documentation to reflect the corridor-data merger
+
+commit 926b70594551680edc0982ea8d42ee0a9faa0973
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sun Jun 1 15:07:34 2014 +0000
+
+    Merge corridor-data-bridges and corridor-data-consensus into corridor-data
+
+commit 60862a23a78a06056e5bf98ad3fee2ab07389ae4
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sun Jun 1 15:07:34 2014 +0000
+
+    Merge corridor-init-filter and corridor-init-forward into corridor-init-forwarding
+
+commit 6532a652de58443fe3a8c3f6ffc51f9381e6a9c5
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sun Jun 1 15:07:34 2014 +0000
+
+    Add and use corridor.d/ and corridor-load-config
+
+commit 482dc5529cf47f68d404b3f241a8e72ebca5923d
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sun Jun 1 15:07:34 2014 +0000
+
+    Rename corridor-ipset* to corridor-load-ipset*
+
+commit 676a465790ff6e7d988cbe564bce1ffaa433af57
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sun Jun 1 15:07:33 2014 +0000
+
+    Move the DESTDIR variable
+
+commit 7f00cd24872b3b0c1f9ebee61fc517870f50543e
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sun Jun 1 15:07:33 2014 +0000
+
+    Remove obvious comments
+
+commit 0f7f54acc3f191b27639207e1a8eb779ae46c933
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Wed May 14 12:36:35 2014 +0000
+
+    Don't complain if the corridor_relays ipset doesn't exist yet
+
+commit 43f35cdcc9d85658e22ee997cb7f1f5da5a385f3
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Wed May 14 12:36:35 2014 +0000
+
+    Clients may be linked by switches etc.
+
+commit 58c6855f9543e6af7e61c44bff801f9793861a05
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Mon Apr 28 12:03:44 2014 +0000
+
+    Ignore unsuccessful socat exit in the receive() loop
+
+commit 9ff2cd13fd68042356bfcced9ddf7f54b7f72c49
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Mon Apr 28 12:03:43 2014 +0000
+
+    Merge setup() into receive() in corridor-data-consensus
+
+commit 64db5c1e00d01526a5d0cd9fc5538a9528ef26cc
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Mon Apr 28 12:03:43 2014 +0000
+
+    Use exec(1)
+
+commit bdb4fb070d5aaccb54d0c36bc6929b02d5d71897
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Tue Apr 22 08:49:29 2014 +0000
+
+    Simplify splitting a line into fields
+
+commit 7c5f35091b1a8031b95cda146c19b0f1c9a4c6e4
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Tue Apr 22 08:49:29 2014 +0000
+
+    Use exec(1)
+
+commit 9f5e874780231148b4999171bbabb31624e3ae88
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sat Apr 19 16:39:35 2014 +0000
+
+    Add a minimal Makefile so you can "make install".
+
+commit facbb4c5dab0df9e53e9cedd18bf8cf5277b7d01
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sat Apr 19 16:39:35 2014 +0000
+
+    Update a comment to reflect e83ccd4
+
+commit 9ef8ebe0d6024e7a965e0051278f37622b7966b8
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sat Apr 19 16:39:35 2014 +0000
+
+    Align the corridor-ipset code
+
+commit 4c051f6483d2106439caaf84b92b42e206b839f0
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sat Apr 19 16:39:34 2014 +0000
+
+    No need to remove the empty first line from the input to corridor-ipset-relays
+
+commit 94becc4474a1095fda88fc219545dcdd0152ae4b
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Tue Apr 1 14:18:46 2014 +0000
+
+    Update the todo list
+
+commit 2d2f501096c3d7dc7fb99377852be1e4fafef6e2
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Tue Apr 1 14:18:46 2014 +0000
+
+    It's no longer called the Tor Browser *Bundle*
+
+commit 2c63c473d5ab09c143891469234e2f30b11c7629
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sun Feb 23 13:41:50 2014 +0000
+
+    Fix the documentation: In relation to the other network, we are a client
+
+commit 2d147ea594b5497ba278b11d2ef3b64e273beb11
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sat Feb 22 15:10:58 2014 +0000
+
+    Tone down the warning a bit
+
+commit 9d1f413a7e4ed4615c9459c27f69d09c2b34726e
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sat Feb 22 15:10:58 2014 +0000
+
+    Fix the documentation: Valid/Guard/Authority flags are irrelevant for corridor-data-bridges
+
+commit efb4591bfe179f3b8db4e18c3e5961bd7ebfa996
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sat Feb 22 13:27:13 2014 +0000
+
+    Optional logging of (some) prevented leaks
+
+commit 432439a5ab89d4e39459eb25cbe63a1b943ef6b5
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sat Feb 22 13:27:13 2014 +0000
+
+    Refactor the main iptables rule into a CORRIDOR chain
+
+commit 1b97e0a9fde01e73656aed22c402da2d2cf5137f
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sat Feb 22 13:27:13 2014 +0000
+
+    Ignore all lines not starting with "Bridge" so you can pipe a torrc into corridor-data-bridges
+
+commit bc2400811495b3792e35e9f0b405c4f28add4d87
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sat Feb 22 13:27:13 2014 +0000
+
+    Support static SNAT in addition to MASQUERADE in corridor-init-snat
+
+commit f69d619b3745852bc4f9340ed6c275b911f6a4f3
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sat Feb 22 13:27:13 2014 +0000
+
+    Place "How does corridor-data-consensus..." after "Example usage"
+
+commit f546cef1c936a5639e3e1f5a0a5e11ca352c7165
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sat Feb 22 13:27:13 2014 +0000
+
+    Refactor corridor-forward into corridor-init-filter, corridor-init-forward, corridor-init-snat
+
+commit 69e4a75f3c190200e812cce96c75c90edc5d3f08
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sat Feb 22 13:27:12 2014 +0000
+
+    Don't clobber an existing ipset during initializiation
+
+commit d892b9a73523ed40049a241975d79ecb6d84ea08
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sat Feb 22 13:27:12 2014 +0000
+
+    Refactor corridor-helper-update into corridor-ipset, corridor-ipset-relays
+
+commit e83ccd40f7acf65d37a0bae31e7fcd62c26cabbd
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sat Feb 22 13:27:12 2014 +0000
+
+    Use ipset(8) syntax for input to corridor-helper-update
+
+commit 3f76838e0aa8e1fe1f38e48e99f9af24da6a97a9
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sat Feb 22 13:27:12 2014 +0000
+
+    Rename tor_relays to corridor_relays
+
+commit 344f03972683ec7ac404c88f1877a45d6ff68bff
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sat Feb 22 13:27:12 2014 +0000
+
+    Input to corridor-helper-update is already unique since ccb148b
+
+commit 1adf9f30ee55eccaf8cfb065fa8a683099d0d113
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Mon Feb 17 08:02:27 2014 +0000
+
+    Only allow connections to Valid relays with a Guard or an Authority flag
+
+commit bdbc21cc094bf5c2d73b79af463ab794e3adcbb4
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Mon Feb 17 08:01:22 2014 +0000
+
+    Factor out line reassembly
+
+commit ccb148b0e3de93bba9f0fabbd64ae43f91ca74ad
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Mon Feb 17 07:59:53 2014 +0000
+
+    Only allow connections to relays' ORPort
+
+commit bb65b0e44e1f03eb68e20acb054137388e93294a
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Mon Feb 17 07:55:28 2014 +0000
+
+    Pitfall: malware + colluding relay
+
+commit 05c1543b660efcc288b4a6c4c4027d4be28ffa49
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Mon Feb 17 07:54:39 2014 +0000
+
+    Clarify the documentation
+
+commit ffd751ed43a1390358a037510574309110c35b79
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Fri Feb 14 12:44:04 2014 +0000
+
+    Hello world
