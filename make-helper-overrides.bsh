@@ -27,4 +27,10 @@ make_install() {
       test -f "$systemd_unit_file_original_name"
       cp "$systemd_unit_file_original_name" "$DESTDIR/lib/systemd/system/$systemd_unit_file_dest_file_name"
    done
+
+   local systemd_unit_file_target
+
+   for systemd_unit_file_target in "$DESTDIR/lib/systemd/system/"*; do
+      sed -i "s|SBIN|/usr/sbin|g" "$systemd_unit_file_target"
+   done
 }
