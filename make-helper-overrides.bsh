@@ -18,5 +18,13 @@ make_install() {
 
    cp corridor-* "$DESTDIR/usr/sbin/"
    cp corridor.d/* "$DESTDIR/etc/corridor.d/"
-   cp systemd/* "$DESTDIR/lib/systemd/system/"
+
+   local systemd_unit_file_original_name systemd_unit_file_base_name systemd_unit_file_dest_file_name
+
+   for systemd_unit_file_original_name in systemd/*; do
+      systemd_unit_file_base_name="${systemd_unit_file_original_name##*/}"
+      systemd_unit_file_dest_file_name="${systemd_unit_file_base_name%.in}"
+      test -f "$systemd_unit_file_original_name"
+      cp "$systemd_unit_file_original_name" "$DESTDIR/lib/systemd/system/$systemd_unit_file_dest_file_name"
+   done
 }
