@@ -1,10 +1,10 @@
-corridor (0:0.3-1) unstable; urgency=medium
+corridor (0:20160710131757-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
  -- Patrick Schleizer <adrelanos@riseup.net>  Sun, 03 Jul 2016 16:23:10 +0000
 
-corridor (0:0.2-1) unstable; urgency=low
+corridor (0:00000000000000-1) unstable; urgency=low
 
   * Initial release.
   * New upstream version (local package).
