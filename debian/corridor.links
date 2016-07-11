@@ -1,0 +1,10 @@
+/usr/share/man/man8/corridor.8.gz /usr/share/man/man8/corridor-data.8.gz
+/usr/share/man/man8/corridor.8.gz /usr/share/man/man8/corridor-init-forwarding.8.gz
+/usr/share/man/man8/corridor.8.gz /usr/share/man/man8/corridor-init-logged.8.gz
+/usr/share/man/man8/corridor.8.gz /usr/share/man/man8/corridor-init-snat.8.gz
+/usr/share/man/man8/corridor.8.gz /usr/share/man/man8/corridor-load-config.8.gz
+/usr/share/man/man8/corridor.8.gz /usr/share/man/man8/corridor-load-ipset.8.gz
+/usr/share/man/man8/corridor.8.gz /usr/share/man/man8/corridor-load-ipset-logged.8.gz
+/usr/share/man/man8/corridor.8.gz /usr/share/man/man8/corridor-load-ipset-relays.8.gz
+/usr/share/man/man8/corridor.8.gz /usr/share/man/man8/corridor-stop-forwarding.8.gz
+/usr/share/man/man8/corridor.8.gz /usr/share/man/man8/corridor-stop-snat.8.gz
