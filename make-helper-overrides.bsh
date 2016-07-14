@@ -19,9 +19,6 @@ make_install() {
    cp corridor-* "$DESTDIR/usr/sbin/"
    cp corridor.d/* "$DESTDIR/etc/corridor.d/"
 
-   ## https://github.com/rustybird/corridor/issues/11
-   cp debian/50-debian.conf "$DESTDIR/etc/corridor.d/"
-
    local systemd_unit_file_original_name systemd_unit_file_base_name systemd_unit_file_dest_file_name
 
    for systemd_unit_file_original_name in systemd/*; do
