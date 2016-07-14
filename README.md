@@ -1,6 +1,7 @@
-**This is an early release. HERE BE DRAGONS? Not affiliated with the Tor Project.**
-
 # corridor, a Tor traffic whitelisting gateway
+
+**Not affiliated with the Tor Project.**
+
 
 There are several transparently torifying gateways. They suffer from the same problems:
 
@@ -38,15 +39,15 @@ You can think of it as a fail-safe for your vanilla Tor Browser or Tails, for yo
 ## Installation
 
 ```
-# Install to the default location /usr/local/sbin.
-make install
+# Install corridor and its systemd units to the default location in /usr/local.
+make install install-systemd
 
 # Edit the configuration.
 $EDITOR /etc/corridor.d/*
 ```
 
 
-## Usage
+## Manual usage
 
 ```
 # Set up IP traffic forwarding.
@@ -84,24 +85,31 @@ systemctl enable corridor.target
 ```
 
 
-## torrc
+## Qubes
 
-You may want to add the line
+**This has barely even been tested, be careful!**
 
 ```
-DirPort 127.0.0.1:9030
-```
+# In your template:
+dnf install tor ipset socat perl make  # or apt-get ...
+make PREFIX=/usr install install-systemd install-qubes
+systemctl enable corridor.target
 
-to /etc/tor/torrc to always keep the relay list up to date, even when there's no local activity and tor would otherwise suspend itself.
+# In dom0:
+qvm-create --proxy --template your-template --label blue corridor-gateway
+qvm-service --enable corridor-gateway corridor
+```
 
 
 ## How does corridor-data open a Tor control connection?
 
-If $TOR_CONTROL_SOCKET is nonempty (e.g. /var/run/tor/control), use it.
-Otherwise, connect to $TOR_CONTROL_HOST (defaults to localhost) on port $TOR_CONTROL_PORT (defaults to 9051).
+If $TOR_CONTROL_SOCKET is nonempty, use it.
+Otherwise, connect to $TOR_CONTROL_HOST (localhost if unset) on $TOR_CONTROL_PORT (9051 if unset).
 
-If $TOR_CONTROL_COOKIE_AUTH_FILE is nonempty (e.g. /var/run/tor/control.authcookie), use it.
-Otherwise, pass $TOR_CONTROL_PASSWD (defaults to an empty password).
+If $TOR_CONTROL_COOKIE_AUTH_FILE is nonempty, use it.
+Otherwise, pass $TOR_CONTROL_PASSWD.
+
+The default configuration file sets $TOR_CONTROL_SOCKET to /var/run/tor/control, and $TOR_CONTROL_COOKIE_AUTH_FILE to /var/run/tor/control.authcookie. These values work on Debian and Fedora.
 
 
 ## Dependencies so far
@@ -121,7 +129,7 @@ Otherwise, pass $TOR_CONTROL_PASSWD (defaults to an empty password).
 
 ## Todo
 
-- Allow IPv6 connections to Tor relays instead of blocking all IPv6 traffic
+- Configure dnsmasq as a logging (but non-forwarding) DNS server
 - Build a WiFi/Ethernet portal that allows people to download Tor Browser:
 	- Configure hostapd as an open AP
 	- Configure dnsmasq
@@ -133,7 +141,7 @@ Otherwise, pass $TOR_CONTROL_PASSWD (defaults to an empty password).
 	- Transparently torify connections to only those domains' IP addresses on port 443
 	- Configure publicfile to serve an info page linking to https://www.torproject.org
 	- MITM all requests to port 80 into a HTTP 302 redirect to that info page
-- Bundle it all up (docker?) for Raspberry Pi / BeagleBone Black
+- OpenWRT support
 
 
 ## Version numbers
