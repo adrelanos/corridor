@@ -12,28 +12,5 @@ make_helper() {
 make_install() {
    make_function_run make_get_destdir
 
-   mkdir -p "$DESTDIR/usr/sbin/"
-   mkdir -p "$DESTDIR/etc/corridor.d"
-   mkdir -p "$DESTDIR/lib/systemd/system/"
-
-   cp corridor-* "$DESTDIR/usr/sbin/"
-   cp corridor.d/* "$DESTDIR/etc/corridor.d/"
-
-   local systemd_unit_file_original_name systemd_unit_file_base_name systemd_unit_file_dest_file_name
-
-   for systemd_unit_file_original_name in systemd/*; do
-      systemd_unit_file_base_name="${systemd_unit_file_original_name##*/}"
-      systemd_unit_file_dest_file_name="${systemd_unit_file_base_name%.in}"
-      test -f "$systemd_unit_file_original_name"
-      cp "$systemd_unit_file_original_name" "$DESTDIR/lib/systemd/system/$systemd_unit_file_dest_file_name"
-   done
-
-   local systemd_unit_file_target
-
-   for systemd_unit_file_target in "$DESTDIR/lib/systemd/system/"*; do
-      if ! echo "$systemd_unit_file_target" | grep "corridor-"; then
-         continue
-      fi
-      sed -i "s|SBIN|/usr/sbin|g" "$systemd_unit_file_target"
-   done
+   make PREFIX=/usr SYSTEM=/lib/systemd/system DESTDIR="$DESTDIR" install install-systemd install-qubes
 }
