@@ -17,7 +17,7 @@ make_install() {
 
 make_deb-cleanup_hook_pre() {
    ## Get rid of systemd/corridor-data.service etc.
-   make -f Makefile_orig PREFIX=/usr SYSTEM=/lib/systemd/system DESTDIR="$DESTDIR" clean
+   make -f Makefile_orig clean
 }
 
 make_clean_hook_pre() {
