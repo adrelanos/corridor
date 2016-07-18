@@ -14,3 +14,12 @@ make_install() {
 
    make -f Makefile_orig PREFIX=/usr SYSTEM=/lib/systemd/system DESTDIR="$DESTDIR" install install-systemd install-qubes
 }
+
+make_deb-cleanup_hook_pre() {
+   ## Get rid of systemd/corridor-data.service etc.
+   make -f Makefile_orig PREFIX=/usr SYSTEM=/lib/systemd/system DESTDIR="$DESTDIR" clean
+}
+
+make_clean_hook_pre() {
+   make_deb-cleanup_hook_pre
+}
