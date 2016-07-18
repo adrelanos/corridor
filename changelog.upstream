@@ -1,3 +1,424 @@
+commit dc136643d56de8d2184164eb440f4a5617ac6a7e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Jul 18 21:02:04 2016 +0000
+
+    no need to set variables for 'make clean'
+
+commit 0e6e6b4d399070030d727295d7e59b017a6c8dc0
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Jul 18 17:14:24 2016 +0000
+
+    properly run upstream make file 'make clean'
+    
+    https://github.com/rustybird/corridor/issues/18
+    
+    https://github.com/rustybird/corridor/issues/10
+
+commit 01b7cbbdb87032b3f2ecdc78ac8c59cdd68cf967
+Merge: 313fa4a 2b17a45
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Jul 18 16:19:41 2016 +0000
+
+    use original makefile
+    
+    https://github.com/rustybird/corridor/issues/18
+    
+    https://github.com/rustybird/corridor/issues/10
+    
+    Merge branch 'orig_makefile'
+
+commit 2b17a45a6d262fb5274200132c071f8b4587fca9
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Jul 18 16:04:58 2016 +0000
+
+    .
+
+commit 42ef8aff5f2c346729467f3a8efaeed2c8ebf95d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jul 16 15:16:05 2016 +0000
+
+    .
+
+commit 313fa4aee495e016cef0172f1deba78027b95cd3
+Merge: 6bcf1f8 463834f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jul 16 15:27:08 2016 +0200
+
+    Merge remote-tracking branch 'rustybird/master'
+
+commit 463834f8778c5a165346ac73442e8fede0366b6b
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Fri Jul 15 11:58:00 2016 +0000
+
+    Factor out loose IPv4:port matching
+
+commit 10ba25123087070e9fc91681228989a652c07286
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Fri Jul 15 11:57:58 2016 +0000
+
+    Capitalize "Versioning", too
+
+commit faf9309ca0891a8e9a069d4a93ce0e9162c80dd4
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Thu Jul 14 16:56:55 2016 +0000
+
+    Capitalize sentence
+
+commit 4390c2a3f8ff34983cb18074f1865a33f5255af0
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Thu Jul 14 16:48:58 2016 +0000
+
+    Switch to semantic versioning
+
+commit 6bcf1f8daa5365d256a9d4e26b5091265946fc5b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jul 14 16:25:36 2016 +0200
+
+    remove Debian specific configuration file
+    
+    since https://github.com/rustybird/corridor/issues/11 was fixed upstream in corridor
+
+commit 2b3c46772f9bc25db0516bca90a6fb57922df3e1
+Merge: 6e8a575 307ceed
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jul 14 16:23:18 2016 +0200
+
+    Merge remote-tracking branch 'rustybird/master'
+    
+    Conflicts:
+    	Makefile
+
+commit 307ceeda94a7970245a1f27a57ab51a7ed5f5d45
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Wed Jul 13 16:34:57 2016 +0000
+
+    Rephrase Qubes warning
+
+commit 2e392365e5d96e4131240c14a7013eb3ebe23f00
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Wed Jul 13 13:19:24 2016 +0000
+
+    Not such a terribly early release anymore
+
+commit 09dc636fe7bba173339665215bb30caf9b6642d5
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Wed Jul 13 13:15:14 2016 +0000
+
+    Update todo list
+
+commit 25a21981dcd265d46434b4f90791ce6ea0200db5
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Wed Jul 13 13:01:08 2016 +0000
+
+    Avoid pkg-config and systemctl in Makefile
+
+commit 66b8c2cec4dba2e9e762d0479dc6a1994b1856f6
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Wed Jul 13 13:01:06 2016 +0000
+
+    Use correct installation command
+
+commit bf303ee9b54fbaaadb3cc7649602d6c023ddc45b
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Wed Jul 13 05:57:00 2016 +0000
+
+    Move corridor-* to sbin/
+
+commit 5c0cf80c5819b39778df7036d6d5774250690a48
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Wed Jul 13 05:12:27 2016 +0000
+
+    Qubes support
+    
+    Fixes #17
+
+commit c8bc8434c05c848c688fa901ce9c4d977679d0ad
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Wed Jul 13 04:36:28 2016 +0000
+
+    Use Debian/Fedora defaults for control connections
+    
+    Fixes #11
+
+commit d431cb00c41cc8f7331892cb273f417574c4e735
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Wed Jul 13 04:36:26 2016 +0000
+
+    Remove duplicate "Processing router list..." message
+    
+    Fix regression introduced by a56d751df399ab1c54f64b0d4dc59f732dc0adc3
+    ("Fix connection errors for clients' first consensus download")
+
+commit 7ca242b758de55adfe0b3e7d06929b2e3d9447f8
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Tue Jul 12 13:32:30 2016 +0000
+
+    Use 'ln -sf' instead of 'ln -s' for manpages
+
+commit f1a931c2f914d1552b64aafa5d6578e34944affa
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Tue Jul 12 13:01:03 2016 +0000
+
+    Set DirPort automatically
+    
+    #16
+
+commit c4267ce7ad5a054fed9442170c07d237a9983dd8
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Mon Jul 11 14:50:41 2016 +0000
+
+    Add NoAdvertise to DirPort line in README
+    
+    It doesn't make a difference as long as we are not also advertising an
+    ORPort, but relying on undocumented behavior is a bad idea.
+
+commit 6e8a575342cbf1723afbae2ea95ed88265fd14f9
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Jul 11 14:31:06 2016 +0000
+
+    use corridor's upstream new version scheme
+    
+    https://github.com/rustybird/corridor/issues/9
+    
+    https://github.com/rustybird/corridor/issues/10
+
+commit b63d51e5c1d3d14d238278df26a6a88bb1177dba
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Jul 11 14:29:55 2016 +0000
+
+    add README.debian
+    
+    https://github.com/rustybird/corridor/issues/10
+
+commit 29b98dd30e8f7185981490398d5f020c33082c39
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Jul 11 15:01:21 2016 +0200
+
+    bumped debian/compat from 8 to 9
+
+commit 85997f575d1dc2e468b84f3e18d4baec862830dd
+Merge: 0ccbcc2 c23f48b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Jul 11 14:18:34 2016 +0200
+
+    Merge branch 'debian_new'
+
+commit c23f48b6ab9617fc64afe1ca39976877fa900838
+Merge: 44e3c0b 0ccbcc2
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Jul 11 14:18:22 2016 +0200
+
+    Merge branch 'master' into debian_new
+    
+    Conflicts:
+    	Makefile
+
+commit 0ccbcc2ef8a486d293d7b14bd03794ce7bcefc06
+Merge: eea5c0f 6605d78
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Jul 11 14:17:20 2016 +0200
+
+    Merge remote-tracking branch 'rustybird/master'
+
+commit 6605d78c2f40d058578dcc1c1ca456d744acb2dc
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sun Jul 10 13:17:57 2016 +0000
+
+    Ship pregenerated manpage
+
+commit 6d86348e5faace194c0b5538a41fb48ebf385fb1
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sun Jul 10 13:17:55 2016 +0000
+
+    Add rules to generate and install manpage
+
+commit 351450e37a36895e9c5a920164a1d988df136da3
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sun Jul 10 13:17:53 2016 +0000
+
+    Minor manpage changes
+
+commit 90d187c636067894376a283b275d28a19a36092c
+Merge: eea5c0f 5714d69
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sun Jul 10 13:16:11 2016 +0000
+
+    Merge remote-tracking branch 'origin/pr/15'
+
+commit 5714d6975ff35bc192f3be2a2d16e66384dfcdd9
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jul 9 21:12:49 2016 +0000
+
+    man page fixes
+
+commit 44e3c0b4f6f9933f460d89a81ed4ce324c406907
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jul 9 21:12:49 2016 +0000
+
+    man page fixes
+
+commit cc5b01b1bb34cbe55252b3df9c0e774f2e42c447
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jul 9 21:05:48 2016 +0000
+
+    enable manpage creation and create symlinks to combined manpage
+
+commit 239d19af45bcd6e34b295a38f0471f7b647aac6f
+Merge: 26eceed 4125f65
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jul 9 22:53:29 2016 +0200
+
+    Merge branch 'manpage' into debian_new
+
+commit 26eceed934ea45f3eeffee04fe88b375b7d6d822
+Merge: 90663fe eea5c0f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jul 9 22:53:18 2016 +0200
+
+    Merge branch 'master' into debian_new
+
+commit 4125f653b4126dda499dc0e4a9d0fbe7ab832e54
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jul 9 22:52:41 2016 +0200
+
+    initial manpage
+
+commit 90663fe092ea4cd4ccba717bfa1cecda19e7dcc3
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Jul 8 14:10:32 2016 +0000
+
+    fix lintian copyright warning
+    
+    I: corridor source: unused-file-paragraph-in-dep5-copyright paragraph at line 3
+
+commit eea5c0f4544cd130cd25118733ea1a2328666dfb
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Thu Jul 7 06:19:44 2016 +0000
+
+    Actually ensure IPv6 forwarding is disabled
+    
+    There is no net.ipv6.ip_forward parameter at all! The correct parameter
+    to use is net.ipv6.conf.all.forwarding.
+    
+    Luckily, IPv6 forwarding is disabled by default at the kernel level.
+    systemd-networkd doesn't automatically enable it; Debian 8, Fedora 23,
+    and Arch don't seem to either.
+    
+    Also closes #14
+
+commit 20865913dc1bcaddf5d9e532cfbda624873241dd
+Merge: 8315537 6b2e31c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jul 6 19:35:00 2016 +0000
+
+    Merge branch 'master' into debian_new
+
+commit 6b2e31c09187f87b30363e0a4f4d9e53484f21c8
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Wed Jul 6 11:47:45 2016 +0000
+
+    Add and use corridor-stop-snat
+
+commit b659925320bdaacdb7516dd41e88ba3073f9c54e
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Wed Jul 6 11:47:42 2016 +0000
+
+    Use separate chain for SNAT
+
+commit 94121e268709d9c46487fa7c11a9d162efad0d12
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Wed Jul 6 11:47:38 2016 +0000
+
+    Add and use corridor-stop-forwarding
+    
+    Closes #13
+
+commit 50b75479f9dfcabb12488a0574231e3cfa60fcc0
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Wed Jul 6 11:47:34 2016 +0000
+
+    Rename CORRIDOR chain to CORRIDOR_FORWARD
+
+commit 4d9854a5591b235a73a2706b42bbcd8be360c5f2
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Tue Jul 5 18:19:50 2016 +0000
+
+    Use committer date instead of author date
+
+commit 6c5f3ca431eceb92856662379f82d2fc79399386
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Tue Jul 5 18:01:02 2016 +0000
+
+    Explain version numbers and git branches
+    
+    Fixes #9
+    Closes #12
+
+commit 831553771ed5f69e1cd0c44e4ade91bc90068133
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Jul 5 15:50:29 2016 +0000
+
+    Debian specific Tor Control Authcookie file configuration
+    
+    https://github.com/rustybird/corridor/issues/11
+
+commit 3158dbc5ecf7e53a5d236de60eea370bfb2eb7d9
+Merge: 61afc93 57c397d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Jul 5 17:37:01 2016 +0200
+
+    Merge branch 'master' into debian_new
+    
+    Conflicts:
+    	Makefile
+
+commit 57c397dde89b570a6f6be73f16caac100275f337
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Tue Jul 5 12:46:28 2016 +0000
+
+    network-pre.target is a passive target
+    
+    Fix regression introduced by d357f77409cd1b1bf69cf767df4761345e924cc0
+    ("Order corridor-init-forwarding before network-pre.target")
+
+commit 75244c17a9ed0569faa00f1181644d847a2840ac
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Mon Jul 4 10:22:29 2016 +0000
+
+    Make corridor-load-config greexecutable again
+    
+    Works as a config file sanity tester now. #10
+
+commit 61afc9382cd123421878f4f579ce85adb43c9e6f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jul 3 17:59:32 2016 +0000
+
+    add postinst / postrm for creation / deletion of /var/lib/corridor
+
+commit 66d2027d18e24899bc5de438c54065a65654f6d8
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jul 3 17:37:02 2016 +0000
+
+    .
+
+commit 3a8f3290a15a407362924155e794816e6c5b6fe2
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jul 3 17:31:38 2016 +0000
+
+    fix, patch SBIN in systemd unit files to /usr/sbin
+
+commit 01e009eb88e73575a82a79dd9550ac69eec5a7c3
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jul 3 17:10:25 2016 +0000
+
+    fix, strip the .in file extension from systemd unit files
+
+commit 94c0a16c054620a33c1c3d035ea2c91ace1102a7
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jul 3 16:47:20 2016 +0000
+
+    new packaging attempt
+
 commit 03a8a08c37cb307801ddf3395e75c631cebcf428
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Jul 3 18:01:23 2016 +0200
