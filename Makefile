@@ -1,37 +1,18 @@
-PREFIX = /usr/local
-SBIN   = $(PREFIX)/sbin
-SYSTEM = $(PREFIX)/lib/systemd/system
-MAN    = $(PREFIX)/share/man
+#!/usr/bin/make -f
 
-UNITS = systemd/corridor-data.service \
-        systemd/corridor-init-forwarding.service \
-        systemd/corridor-init-logged.service \
-        systemd/corridor-init-snat.service \
-        systemd/corridor.target
+## Copyright (C) 2012 - 2014 Patrick Schleizer <adrelanos@riseup.net>
+## See the file COPYING for copying conditions.
 
-systemd-units: $(UNITS)
+## genmkfile - Makefile - version 1.5
 
-%.service: %.service.in
-	sed 's:SBIN/:$(SBIN)/:' $< >$@
+## This is a copy.
+## master location:
+## https://github.com/Whonix/genmkfile/blob/master/usr/share/genmkfile/Makefile
 
-%.8: %.8.ronn
-	ronn -r $<
+GENMKFILE_PATH ?= /usr/share/genmkfile
+GENMKFILE_ROOT_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 
-install: man/corridor.8
-	install -d $(DESTDIR)$(SBIN) $(DESTDIR)$(MAN)/man8 $(DESTDIR)/etc/corridor.d $(DESTDIR)/var/lib/corridor
-	install sbin/* $(DESTDIR)$(SBIN)
-	install -m 644 man/corridor.8 $(DESTDIR)$(MAN)/man8
-	for f in sbin/*; do ln -sf corridor.8 $(DESTDIR)$(MAN)/man8/$${f##*/}.8; done
-	install -m 644 corridor.d/* $(DESTDIR)/etc/corridor.d
+export GENMKFILE_PATH
+export GENMKFILE_ROOT_DIR
 
-install-systemd: systemd-units
-	install -d $(DESTDIR)$(SYSTEM)
-	install -m 644 $(UNITS) $(DESTDIR)$(SYSTEM)
-
-install-qubes:
-	install -d $(DESTDIR)/etc/corridor.d $(DESTDIR)$(SYSTEM)
-	install -m 644 qubes/corridor.d/* $(DESTDIR)/etc/corridor.d
-	umask 022 && cp -RP qubes/systemd/* $(DESTDIR)$(SYSTEM)
-
-clean:
-	rm -f systemd/*.service
+include $(GENMKFILE_PATH)/makefile-full

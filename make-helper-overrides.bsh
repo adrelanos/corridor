@@ -12,5 +12,5 @@ make_helper() {
 make_install() {
    make_function_run make_get_destdir
 
-   make PREFIX=/usr SYSTEM=/lib/systemd/system DESTDIR="$DESTDIR" install install-systemd install-qubes
+   make -f Makefile_orig PREFIX=/usr SYSTEM=/lib/systemd/system DESTDIR="$DESTDIR" install install-systemd install-qubes
 }
