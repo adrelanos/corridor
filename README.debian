@@ -1,5 +1,0 @@
-## Debian upstream version
-
-```
-git show --no-patch --pretty=format:%ci rustybird/master  | tr -dc 0-9 | cut -b -14
-```
