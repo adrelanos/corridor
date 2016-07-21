@@ -6,8 +6,7 @@ Source: corridor
 Section: misc
 Priority: optional
 Maintainer: Patrick Schleizer <adrelanos@riseup.net>
-Build-Depends: debhelper (>= 9), faketime, genmkfile, ruby-ronn (>= 0.7.3),
- dh-systemd
+Build-Depends: debhelper (>= 9), faketime, genmkfile, dh-systemd
 Homepage: https://github.com/rustybird/corridor
 Vcs-Browser: https://github.com/rustybird/corridor
 Vcs-Git: https://github.com/rustybird/corridor.git
