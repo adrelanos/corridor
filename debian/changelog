@@ -1,3 +1,9 @@
+corridor (0:0.10.0-1) unstable; urgency=medium
+
+  * New upstream version (local package).
+
+ -- Patrick Schleizer <adrelanos@riseup.net>  Sat, 23 Jul 2016 14:09:00 +0000
+
 corridor (0:0.9.2-1) unstable; urgency=medium
 
   * New upstream version (local package).

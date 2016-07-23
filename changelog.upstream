@@ -1,3 +1,81 @@
+commit 88f373f06fe6271fe1230901ad16147c50f3022d
+Merge: b87f0a8 d37640c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jul 23 14:07:19 2016 +0000
+
+    Merge remote-tracking branch 'rustybird/master'
+    
+    Conflicts:
+    	Makefile
+
+commit d37640ccf83630add83fdb316986f78e7689b308
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sat Jul 23 12:39:19 2016 +0000
+
+    Also load configuration from /usr/local/etc/corridor.d
+    
+    Fixes #22
+
+commit 640d6b5ce08d0887c921702cb796cdc72a43814c
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sat Jul 23 12:39:18 2016 +0000
+
+    Align a line
+
+commit cd05d9557cabc2c5978051f84f7b695c343916b8
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sat Jul 23 12:39:16 2016 +0000
+
+    Rename CORRIDOR_FORWARD chain to CORRIDOR_FILTER
+
+commit b87f0a84a94a2bc583b5547536252d68d7a2100b
+Merge: 310a60f 1ce7055
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jul 21 20:04:03 2016 +0200
+
+    Merge remote-tracking branch 'rustybird/master'
+
+commit 310a60f1b49128aa9394b90cf6d54785188649bf
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jul 21 18:08:51 2016 +0200
+
+    disable man page creation since that is now done by upstream
+    
+    Thanks to @rustybird for the report!
+    
+    https://github.com/rustybird/corridor/issues/10#issuecomment-234256335
+
+commit 746773ba5a635c319b1eb83ba9cd7af2f8a73477
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jul 21 17:36:17 2016 +0200
+
+    delete README.debian
+    
+    no longer required since corridor is providing releases now
+    
+    Thanks for @rustybird for the report!
+    
+    https://github.com/rustybird/corridor/issues/21#issuecomment-234266585
+
+commit 1ce7055d7394739d1c6162c1cad11ffa207d1d3c
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Thu Jul 21 13:11:41 2016 +0000
+
+    Order corridor-data after qubes-mount-dirs
+    
+    The state file is saved on /rw, but mounting /rw is not part of the
+    DefaultDependencies.
+    
+    Fixes #21
+
+commit e9907c96ffc0264139c48625b6688a160f1d934c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Jul 18 21:26:28 2016 +0000
+
+    move to new corridor version scheme
+    
+    https://github.com/rustybird/corridor/issues/10
+
 commit dc136643d56de8d2184164eb440f4a5617ac6a7e
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Jul 18 21:02:04 2016 +0000
