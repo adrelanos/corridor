@@ -1,3 +1,46 @@
+commit b767a6ae1d82769b67097142814cbda3625b79a2
+Merge: 3efc8cc cfaabc5
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jul 30 17:35:46 2016 +0000
+
+    Merge remote-tracking branch 'rustybird/master'
+    
+    Conflicts:
+    	Makefile
+
+commit cfaabc5d27fb7dfa494d828dbe2998730898674e
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sat Jul 30 10:53:10 2016 +0000
+
+    Requires=, not Require=
+    
+    #29
+
+commit f8708d415d98a6831ace8819c0a926ef277153c1
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sat Jul 30 10:53:09 2016 +0000
+
+    Use autoconf-like @SBIN@
+    
+    #29
+
+commit ce0b65cf4863184487b360361b1f40767e603e0b
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sun Jul 24 11:47:06 2016 +0000
+
+    qubes-service.conf: Use triggering conditions
+    
+    Start if the Qubes services directory doesn't exist at all, e.g. because
+    "make install-qubes" was run on another platform.
+    
+    Closes #27
+
+commit 3efc8cc212bbc5021d9bd291c986d651246ad9aa
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jul 23 14:11:58 2016 +0000
+
+    bumped changelog version
+
 commit 88f373f06fe6271fe1230901ad16147c50f3022d
 Merge: b87f0a8 d37640c
 Author: Patrick Schleizer <adrelanos@riseup.net>
