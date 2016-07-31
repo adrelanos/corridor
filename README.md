@@ -72,9 +72,9 @@ corridor-init-logged
 # network interfaces (make sure that whatever it is correctly orders
 # itself after network-pre.target!), you must add a dependency:
 mkdir /etc/systemd/some.service.d
-cat  >/etc/systemd/some.service.d/corridor.conf <<-END
-	[Unit]
-	Requires=corridor-init-forwarding.service
+cat  >/etc/systemd/some.service.d/corridor.conf <<END
+[Unit]
+Requires=corridor-init-forwarding.service
 END
 
 # Start corridor
@@ -117,7 +117,7 @@ The default configuration file sets $TOR_CONTROL_SOCKET to /var/run/tor/control,
 - ipset, iptables, sysctl
 - socat (to open control connections)
 - sh, make, grep, sed, sleep, sort, test, echo
-- perl (to convert control cookies to hex, easily replacable)
+- perl (to convert control cookies to hex, easily replaceable)
 - Linux kernel:
 	- CONFIG_IP_SET_HASH_IPPORT
 	- CONFIG_IP_SET_HASH_NET
@@ -151,4 +151,4 @@ The default configuration file sets $TOR_CONTROL_SOCKET to /var/run/tor/control,
 
 ## Redistribution
 
-corridor is ISC licensed, see the LICENSE file for details.
+corridor is permissively licensed, see the LICENSE-ISC file for details.
