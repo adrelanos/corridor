@@ -1,3 +1,67 @@
+commit 24cc4eff4722a7f7b96941b9349e85a3018f521a
+Merge: 48ffa45 51e09be
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jul 31 14:08:37 2016 +0000
+
+    Merge remote-tracking branch 'rustybird/master'
+    
+    Conflicts:
+    	Makefile
+
+commit 51e09be7dd1fc3cd8d841342d2b8be5b8e6c600b
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sun Jul 31 12:32:24 2016 +0000
+
+    Use DefaultDependencies=no in -forwarding.service
+    
+    Avoid ordering cycles if a unit (e.g. Debian's networking.service)
+    orders itself after network-pre.target but before basic.target.
+    
+    Closes #29
+
+commit 47895437c6ea7200ec190b88e1e1c79c6186eadc
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sun Jul 31 12:32:23 2016 +0000
+
+    Break qubes-iptables.service's cycle
+    
+    #29
+
+commit e0ce0f8242166a4f8a01462c2d094fb55b6b93ae
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sun Jul 31 12:32:21 2016 +0000
+
+    Automatically run clean target before install-systemd target
+    
+    https://github.com/rustybird/corridor/issues/18#issuecomment-233384918
+
+commit 8b3c9f0713b853e1c8d0da5eeb9e2f0027153522
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sun Jul 31 12:32:20 2016 +0000
+
+    README.md: Don't use tabs in instructions
+
+commit 950bd054657af58be539178ae10e7a1688cbcc9c
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sun Jul 31 12:32:18 2016 +0000
+
+    README.md: Fix typo
+
+commit b9bab19a59f056270200bd7febf91d4d345dab73
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sun Jul 31 12:32:17 2016 +0000
+
+    Rename LICENSE to LICENSE-ISC
+    
+    This way, the license used is obvious just from looking at the
+    directory.
+
+commit 48ffa4552d25ae3b341154856b634c41319da7f2
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jul 30 17:37:51 2016 +0000
+
+    bumped changelog version
+
 commit b767a6ae1d82769b67097142814cbda3625b79a2
 Merge: 3efc8cc cfaabc5
 Author: Patrick Schleizer <adrelanos@riseup.net>
