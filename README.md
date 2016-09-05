@@ -35,8 +35,11 @@ You can think of it as a fail-safe for your vanilla Tor Browser or Tails, for yo
 	- Clients can spoof their source IP address.
 	- The kernel shows MAC addresses in the log lines, maybe you don't want that.
 
+- You **probably should not use corridor in combination with other iptables-based firewalls** (like ufw): They can easily clobber some or all of corridor's rules. At the very least, start corridor-init-forwarding and corridor-init-snat *after* your other firewall, e.g. using systemd orderings.
 
 ## Installation
+
+*You may also be interested in Patrick Schleizer's [corridor Debian package](https://github.com/adrelanos/corridor), or the [corridor page in the Whonix wiki](https://www.whonix.org/wiki/Corridor)*
 
 ```
 # Install corridor and its systemd units to the default location in /usr/local.
