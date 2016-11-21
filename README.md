@@ -1,157 +1,101 @@
-# corridor, a Tor traffic whitelisting gateway
+# Tor traffic whitelisting gateway #
 
-**Not affiliated with the Tor Project.**
+There are several transparently torifying gateways. They suffer from the same
+problems:
 
+- It's tricky to isolate circuits and issue NEWNYM signals, especially if
+multiple client computers are involved.
+- Any garbage software can pump identifiers into "anonymous" circuits, and
+get itself exploited by malicious exit nodes.
+- Trust is centralized to the gateway, which is bad enough when used by one
+person, and just inappropriate when shared with strangers.
 
-There are several transparently torifying gateways. They suffer from the same problems:
+corridor takes a different approach. It allows only connections to Tor relays
+to pass through (no clearnet leaks!), but client computers are themselves
+responsible for torifying their own traffic. In other words, it is a filtering
+gateway, not a proxying gateway.
 
-- It's tricky to isolate circuits and issue NEWNYM signals, especially if multiple client computers are involved.
-- Any garbage software can pump identifiers into "anonymous" circuits, and get itself exploited by malicious exit nodes.
-- Trust is centralized to the gateway, which is bad enough when used by one person, and just inappropriate when shared with strangers.
+You can think of it as defense in depth for your vanilla Tor Browser or Tails,
+for your beautiful scary experimental Qubes proxying schemes, etc. Or invite
+the hood to use your WiFi without getting into trouble.
 
-**corridor takes a different approach. It allows only connections to Tor relays to pass through (no clearnet leaks!), but client computers are themselves responsible for torifying their own traffic.** In other words, it is a filtering gateway, not a proxying gateway.
+(This package description has been [automatically](https://github.com/Whonix/whonix-developer-meta-files/blob/master/debug-steps/packaging-helper-script) extracted and mirrored from `debian/control`.)
 
-You can think of it as a fail-safe for your vanilla Tor Browser or Tails, for your beautiful scary experimental Qubes proxying schemes, etc. Or invite the hood to use your WiFi without getting into trouble.
+# Manual Page #
 
+See also `man` folder for more information.
 
-## Principle of operation
+# Generic Readme #
+## Readme Version ##
 
-1. The corridor-data script opens a Tor control connection and subscribes to NEWCONSENSUS events (announcements listing all public relays), unless you inform it of any bridges to use instead.
-2. That data is used to atomically update a Linux ipset (a list of IP-address:TCP-port entries accessible in constant time) named corridor_relays containing either all your bridges or all *acceptable* relays along with their ORPort. Acceptable means the relays have a Valid flag and a Guard or Authority flag.
-3. iptables rules refuse to forward packets unless they are going to / coming from one of the relays inside the ipset.
+[Generic Readme](https://github.com/Whonix/whonix-developer-meta-files/blob/master/README_generic.md) Version 0.3
 
+## Cooperating Anonymity Distributions ##
 
-## Pitfalls
+[Generic Readme](https://github.com/Whonix/whonix-developer-meta-files/blob/master/README_generic.md) beings here. Have a look into the `man` sub folder (if available).
 
-- **To be safe, corridor needs two separate network interfaces**, like two Ethernet NICs, or one WiFi radio and one DSL modem. One is to receive incoming traffic from client computers, the other one is to pass the filtered traffic towards the global internet, **and they need to be on different network address spaces**: Clients must not be able to take a shortcut via DHCP, DNS, ICMP Redirect requests, and who knows what else.
+The functionality of this package was once exclusively available in the [Whonix](https://www.whonix.org) ([github](https://github.com/Whonix/Whonix)) anonymity distribution.
 
-- corridor cannot prevent **malware** on a client computer from **finding out your clearnet IP address**, e.g. by sending the `GETINFO address` command to any Tor control port on the network (incl. the one on the client computer itself). **corridor is not a replacement for using a well-designed operating system on your client computers**, like Qubes with TorVM/Whonix.
+Because multiple projects and individuals stated interest in various of Whonix's functionality (examples: [Qubes OS](http://qubes-os.org/trac) ([discussion](https://groups.google.com/forum/#!topic/qubes-devel/jxr89--oGs0)); [piratelinux](https://github.com/piratelinux) ([discussion](https://github.com/adrelanos/VPN-Firewall/commit/6147f0e606377f5a801e98daf22e24ba2c750a21#commitcomment-6360713))), it's best to share as much source code as possible, it's best to share certain characteristics [(such as /etc/hostname etc.) among all anonymity distributions](https://mailman.boum.org/pipermail/tails-dev/2013-January/002457.html)) Whonix has been split into [multiple separate packages](https://github.com/Whonix).
 
-- The optional **logging of prevented leaks has several limitations**:
-	- Consider the role of DNS:
-		- If leaky client software tries connecting to a server by its IP address, you see that in the log.
-		- If it tries resolving a hostname through a hardcoded DNS server, you see a *failed connection to that DNS server* in the log.
-		- If it tries resolving a hostname but the client system does not know any DNS server, *there is no connection* that could be logged.
-	- Clients can spoof their source IP address.
-	- The kernel shows MAC addresses in the log lines, maybe you don't want that.
+## Generic Packaging ##
 
-- You **probably should not use corridor in combination with other iptables-based firewalls** (like ufw): They can easily clobber some or all of corridor's rules. At the very least, start corridor-init-forwarding and corridor-init-snat *after* your other firewall, e.g. using systemd orderings.
+Files in `etc/...` in root source folder will be installed to `/etc/...`, files in `usr/...` will be installed to `/usr/...` and so forth. This should make renaming, moving files around, packaging, etc. very simple. Packaging of most packages looks very similar.
 
-## Installation
+## How to use outside of Debian or derivatives ##
 
-*You may also be interested in Patrick Schleizer's [corridor Debian package](https://github.com/adrelanos/corridor), or the [corridor page in the Whonix wiki](https://www.whonix.org/wiki/Corridor)*
+Although probably due to generic packaging not very hard. Still, this requires developer skills. [Ports](https://en.wikipedia.org/wiki/Porting) welcome!
 
-```
-# Install corridor and its systemd units to the default location in /usr/local.
-make install install-systemd
+## How to Build deb Package ##
 
-# Edit the configuration.
-$EDITOR /etc/corridor.d/*
-```
+See comments below and [instructions](https://www.whonix.org/wiki/Dev/Build_Documentation/apparmor-profile-torbrowser).
 
+* Replace `apparmor-profile-torbrowser` with the actual name of this package (equals the root source folder name of this package after you git cloned it).
+* You only need [config-package-dev](https://packages.debian.org/wheezy/config-package-dev), when it is listed in the `Build-Depends:` field in `debian/control`.
+* Many packages do not have signed git tags yet. You may request them if desired.
+* We might later use a [documentation template](https://www.whonix.org/wiki/Template:Build_Documentation_Build_Package).
 
-## Manual usage
+## How to install in Debian using apt-get ##
 
-```
-# Set up IP traffic forwarding.
-corridor-init-forwarding
+Binary packages are available in Whonix's APT repository. By no means you are required to use the binary version of this package. This might be interesting for users of Debian and derivatives. **Note, that usage of this package outside of Whonix is untested and there is no maintainer that supports this use case.**
 
-# Set up Source NAT with iptables.
-corridor-init-snat
+1\. Get [Whonix's Signing Key](https://www.whonix.org/wiki/Whonix_Signing_Key).
 
-# Keep track of acceptable Tor relays.
-corridor-data &
-
-# Log attempted leaks from selected clients.
-# This command will block until corridor_relays gets populated!
-corridor-init-logged
-```
-
-
-## systemd
+2\. Add Whonix's Signing Key to apt-key.
 
 ```
-# If you use something other than systemd-networkd to bring up your
-# network interfaces (make sure that whatever it is correctly orders
-# itself after network-pre.target!), you must add a dependency:
-mkdir /etc/systemd/some.service.d
-cat  >/etc/systemd/some.service.d/corridor.conf <<END
-[Unit]
-Requires=corridor-init-forwarding.service
-END
-
-# Start corridor
-systemctl start corridor.target
-
-# Start corridor when booting
-systemctl enable corridor.target
+gpg --export 916B8D99C38EAF5E8ADC7A2A8D66066A2EEACCDA | sudo apt-key add -
 ```
 
-
-## Qubes
-
-**This has barely even been tested, be careful!**
+3\. Add Whonix's APT repository.
 
 ```
-# In your template:
-dnf install tor ipset socat perl make  # or apt-get ...
-make PREFIX=/usr install install-systemd install-qubes
-systemctl enable corridor.target
-
-# In dom0:
-qvm-create --proxy --template your-template --label blue corridor-gateway
-qvm-service --enable corridor-gateway corridor
+echo "deb http://deb.whonix.org jessie main" > /etc/apt/sources.list.d/whonix.list
 ```
 
+4\. Update your package lists.
 
-## How does corridor-data open a Tor control connection?
+```
+sudo apt-get update
+```
 
-If $TOR_CONTROL_SOCKET is nonempty, use it.
-Otherwise, connect to $TOR_CONTROL_HOST (localhost if unset) on $TOR_CONTROL_PORT (9051 if unset).
+5\. Install this package. Replace `package-name` with the actual name of this package.
 
-If $TOR_CONTROL_COOKIE_AUTH_FILE is nonempty, use it.
-Otherwise, pass $TOR_CONTROL_PASSWD.
+```
+sudo apt-get install package-name
+```
 
-The default configuration file sets $TOR_CONTROL_SOCKET to /var/run/tor/control, and $TOR_CONTROL_COOKIE_AUTH_FILE to /var/run/tor/control.authcookie. These values work on Debian and Fedora.
+## Cooperation ##
 
+Most welcome. [Ports](https://en.wikipedia.org/wiki/Porting), distribution maintainers, developers, patches, forks, testers, comments, etc. all welcome.
 
-## Dependencies so far
+## Contact ##
 
-- ipset, iptables, sysctl
-- socat (to open control connections)
-- sh, make, grep, sed, sleep, sort, test, echo
-- perl (to convert control cookies to hex, easily replaceable)
-- Linux kernel:
-	- CONFIG_IP_SET_HASH_IPPORT
-	- CONFIG_IP_SET_HASH_NET
-	- CONFIG_IP_NF_TARGET_MASQUERADE
-	- CONFIG_IP_NF_TARGET_REJECT
-	- CONFIG_NETFILTER_XT_TARGET_LOG
-	- CONFIG_NF_CONNTRACK_IPV4
+* Professional Support: https://www.whonix.org/wiki/Support#Professional_Support
+* Free Forum Support: https://www.whonix.org/forum
+* Github Issues
+* twitter: https://twitter.com/Whonix
 
+## Donate ##
 
-## Todo
-
-- Configure dnsmasq as a logging (but non-forwarding) DNS server
-- Build a WiFi/Ethernet portal that allows people to download Tor Browser:
-	- Configure hostapd as an open AP
-	- Configure dnsmasq
-		- as a DHCP server
-		- as a DNS proxy restricted to
-			- torproject.org
-			- maybe also guardianproject.info
-			- maybe also tails.boum.org if they start to offer https for their ISOs
-	- Transparently torify connections to only those domains' IP addresses on port 443
-	- Configure publicfile to serve an info page linking to https://www.torproject.org
-	- MITM all requests to port 80 into a HTTP 302 redirect to that info page
-- OpenWRT support
-
-
-## Version numbers
-
-[Semantic Versioning](http://semver.org/) is used in the form of signed git tags.
-
-
-## Redistribution
-
-corridor is permissively licensed, see the LICENSE-ISC file for details.
+* [Donate](https://www.whonix.org/wiki/Donate)
