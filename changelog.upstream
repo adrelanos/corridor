@@ -1,3 +1,97 @@
+commit 4bd6da4794d04fecf55affd4821be40c40cf09ad
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Nov 21 17:40:30 2016 +0000
+
+    readme
+
+commit 041d995372c1270aa003f4c394ab1455ecff593a
+Merge: 952342c bd1e9ea
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Sep 5 16:19:48 2016 +0200
+
+    Merge remote-tracking branch 'rustybird/master'
+    
+    Conflicts:
+    	Makefile
+
+commit bd1e9ea8598d72c837933b6cb2868f1a75b1f5db
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Fri Sep 2 12:47:37 2016 +0000
+
+    Use -f (noglob) option in corridor-data
+    
+    Otherwise, line splitting via "set -- $LINE" is unsafe.
+
+commit 7cbdb417d80dcb00aadee1928a3cf88f0b684bb1
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Wed Aug 17 12:37:28 2016 +0000
+
+    Fix broken Markdown
+    
+    #24
+
+commit d41ef93a7e837bd989bd83284b5c9fd59840214f
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Wed Aug 17 12:25:35 2016 +0000
+
+    Mention Debian package and Whonix wiki page
+    
+    Closes #24
+
+commit 4d63e2876c868a1b84cf07bc206f8a168b8d711e
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sun Aug 14 16:24:41 2016 +0000
+
+    FallbackDir support for tor >= 0.2.8.1, e.g. TB >= 6.0.4
+
+commit 918b788125f8c90342e754f8d37c6cc63ab7296b
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sun Aug 14 16:24:39 2016 +0000
+
+    Be flexible about order of IP address and OR port
+
+commit 130c885dad60e1fda0ac332e9f219ed76994837c
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Sun Aug 14 16:24:37 2016 +0000
+
+    Reformat
+
+commit 77901c0039bcf431e2cb8f897a061a5032e8ab42
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Wed Aug 3 12:46:23 2016 +0000
+
+    Rephrase warning about other firewalls
+    
+    #26
+
+commit fe3414d4198c9978ebca082e0a560172c132edae
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Wed Aug 3 12:06:22 2016 +0000
+
+    Warn about other firewalls
+    
+    Fixes #26
+
+commit cc0c4dfab9945a6ce7023cb9ee9e4efffd9273b0
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Wed Aug 3 12:06:21 2016 +0000
+
+    -logged.service: require and order after -data.service
+    
+    Fixes #32
+
+commit f8b2247073b6c51106d4e23250850f94ab494301
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Wed Aug 3 12:06:19 2016 +0000
+
+    Makefile: make the default target depend on man/corridor.8
+
+commit 952342cdc52efca40a7a2e3417767c7949507bcf
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jul 31 19:15:22 2016 +0000
+
+    bumped changelog version
+
 commit 24cc4eff4722a7f7b96941b9349e85a3018f521a
 Merge: 48ffa45 51e09be
 Author: Patrick Schleizer <adrelanos@riseup.net>
