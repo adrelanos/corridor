@@ -9,10 +9,21 @@ make_helper() {
    exit 1
 }
 
+make_all() {
+   echo "Not required, skipping."
+}
+
 make_install() {
    make_function_run make_get_destdir
 
-   make -f Makefile_orig PREFIX=/usr SYSTEM=/lib/systemd/system DESTDIR="$DESTDIR" install install-systemd install-qubes
+   make -f Makefile_orig \
+      PREFIX="/usr" \
+      DESTDIR="$DESTDIR" \
+      ETC="/etc" \
+      SBIN="/usr/sbin" \
+      SYSTEM="/lib/systemd/system" \
+      MAN="/usr/share/man" \
+      install install-systemd install-qubes
 }
 
 make_deb-cleanup_hook_pre() {
