@@ -10,7 +10,7 @@ Build-Depends: debhelper (>= 9), faketime, genmkfile, dh-systemd
 Homepage: https://github.com/rustybird/corridor
 Vcs-Browser: https://github.com/rustybird/corridor
 Vcs-Git: https://github.com/rustybird/corridor.git
-Standards-Version: 3.9.6
+Standards-Version: 3.9.8
 
 Package: corridor
 Architecture: all
