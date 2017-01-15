@@ -1,3 +1,36 @@
+commit 24ea68683e03324e854edaf2d1bca429b9d2295e
+Merge: 1eb3799 ae140fe
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jan 15 12:38:14 2017 +0000
+
+    Merge branch 'systemd-documentation'
+
+commit ae140feda6e74124c852b7a64f9d92d47bd943f8
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jan 15 12:36:13 2017 +0000
+
+    Add Documentation=https://github.com/rustybird/corridor to systemd unit files.
+    
+    This fixes a lintian warning on Debian.
+
+commit 1eb3799e75ac3172dbe212e9c654b53c2baacb50
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jan 15 12:33:08 2017 +0000
+
+    override lintian copyright false positive
+
+commit ae397137cd141e715241dce929313370ebdc5082
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jan 15 08:35:30 2017 +0100
+
+    packaging, bumped Standards-Version from 3.9.6 to 3.9.8 for jessie support
+
+commit 6196ad1062339d3b94b14ba4f24cbd4975ae50dd
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jan 12 02:55:06 2017 +0000
+
+    bumped changelog version
+
 commit db10c0c76a2046070730104fe4860c72b6b35009
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Jan 12 02:51:05 2017 +0000
@@ -12,7 +45,7 @@ Date:   Wed Jan 11 21:10:55 2017 +0000
     Merge branch 'rustybird-master'
     
     Conflicts:
-    	Makefile
+            Makefile
 
 commit d043cfc553e2452300d3954515f10f7bcaeb26eb
 Author: Patrick Schleizer <adrelanos@riseup.net>
@@ -47,8 +80,8 @@ Date:   Sun Jan 8 20:38:23 2017 +0000
     Merge remote-tracking branch 'rustybird/master'
     
     Conflicts:
-    	Makefile
-    	README.md
+            Makefile
+            README.md
 
 commit bda0cc417751a7b910d99f55892466aad740831a
 Author: Rusty Bird <rustybird@openmailbox.org>
@@ -117,7 +150,7 @@ Date:   Mon Sep 5 16:19:48 2016 +0200
     Merge remote-tracking branch 'rustybird/master'
     
     Conflicts:
-    	Makefile
+            Makefile
 
 commit bd1e9ea8598d72c837933b6cb2868f1a75b1f5db
 Author: Rusty Bird <rustybird@openmailbox.org>
@@ -205,7 +238,7 @@ Date:   Sun Jul 31 14:08:37 2016 +0000
     Merge remote-tracking branch 'rustybird/master'
     
     Conflicts:
-    	Makefile
+            Makefile
 
 commit 51e09be7dd1fc3cd8d841342d2b8be5b8e6c600b
 Author: Rusty Bird <rustybird@openmailbox.org>
@@ -269,7 +302,7 @@ Date:   Sat Jul 30 17:35:46 2016 +0000
     Merge remote-tracking branch 'rustybird/master'
     
     Conflicts:
-    	Makefile
+            Makefile
 
 commit cfaabc5d27fb7dfa494d828dbe2998730898674e
 Author: Rusty Bird <rustybird@openmailbox.org>
@@ -312,7 +345,7 @@ Date:   Sat Jul 23 14:07:19 2016 +0000
     Merge remote-tracking branch 'rustybird/master'
     
     Conflicts:
-    	Makefile
+            Makefile
 
 commit d37640ccf83630add83fdb316986f78e7689b308
 Author: Rusty Bird <rustybird@openmailbox.org>
@@ -470,7 +503,7 @@ Date:   Thu Jul 14 16:23:18 2016 +0200
     Merge remote-tracking branch 'rustybird/master'
     
     Conflicts:
-    	Makefile
+            Makefile
 
 commit 307ceeda94a7970245a1f27a57ab51a7ed5f5d45
 Author: Rusty Bird <rustybird@openmailbox.org>
@@ -595,7 +628,7 @@ Date:   Mon Jul 11 14:18:22 2016 +0200
     Merge branch 'master' into debian_new
     
     Conflicts:
-    	Makefile
+            Makefile
 
 commit 0ccbcc2ef8a486d293d7b14bd03794ce7bcefc06
 Merge: eea5c0f 6605d78
@@ -754,7 +787,7 @@ Date:   Tue Jul 5 17:37:01 2016 +0200
     Merge branch 'master' into debian_new
     
     Conflicts:
-    	Makefile
+            Makefile
 
 commit 57c397dde89b570a6f6be73f16caac100275f337
 Author: Rusty Bird <rustybird@openmailbox.org>
