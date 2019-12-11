@@ -1,6 +1,6 @@
 [Unit]
 Description=corridor's forwarding
-Documentation=https://github.com/rustybird/corridor
+Documentation=man:corridor(8)
 DefaultDependencies=no
 After=iptables.service systemd-sysctl.service
 Before=network-pre.target
