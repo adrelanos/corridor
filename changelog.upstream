@@ -1,3 +1,49 @@
+commit 5e0338cc430daf6d2cac3f71523cd34a6f46d612
+Merge: c49e215 35d1308
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Jan 17 11:37:14 2020 -0500
+
+    Merge remote-tracking branch 'rustybird/master'
+
+commit 35d130896f3de6c796f004c6bc413f46dd5bfde7
+Author: Rusty Bird <rustybird@net-c.com>
+Date:   Fri Jan 17 14:15:19 2020 +0000
+
+    Qubes: Skip corridor.d/95-qubes.conf on any other OS
+    
+    Closes #44
+    Closes #45
+
+commit 8344bdfb36a06c2fb3819c61991e76395b9e99a8
+Author: Rusty Bird <rustybird@net-c.com>
+Date:   Fri Jan 17 14:15:17 2020 +0000
+
+    Qubes: Merge *-qubes.conf into 95-qubes.conf
+
+commit 19c077a3c2683d10a2af28fc4d4e2c298f469a49
+Author: Rusty Bird <rustybird@net-c.com>
+Date:   Fri Jan 17 14:15:16 2020 +0000
+
+    Qubes: Remove legacy qubes-mount-dirs.service orderings
+    
+    Obsolete since
+    https://github.com/QubesOS/qubes-core-agent-linux/commit/e0e89f153f87e9c92d647344a9bab7ef578108cb
+
+commit b0cf65bfc8dd70402e2dfe51497363c39930cc45
+Author: Rusty Bird <rustybird@net-c.com>
+Date:   Fri Jan 17 14:15:15 2020 +0000
+
+    Qubes: Remove legacy qubes-netwatcher.service drop-in
+    
+    Obsolete since
+    https://github.com/QubesOS/qubes-core-agent-linux/commit/4a8b10ea8b2f39509d5e73e86ca3d6c5c6d192c9
+
+commit c49e21576f867baf99496c4d23920c50ee026c85
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Jan 17 03:45:34 2020 -0500
+
+    bumped changelog version
+
 commit a6f7cbb5d39abaf9b1cdc5386f0c127cf4028e98
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Jan 17 03:35:06 2020 -0500
