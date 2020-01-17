@@ -1,3 +1,51 @@
+commit fd57a58264dc5bc9b92e74825a1b88d1649d6af3
+Merge: f175fa0 3763199
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jan 16 06:28:49 2020 -0500
+
+    Merge remote-tracking branch 'rustybird/master'
+
+commit 3763199eed5396fa4678f13d5f1e4a6f5547654c
+Author: Rusty Bird <rustybird@net-c.com>
+Date:   Wed Jan 15 21:34:39 2020 +0000
+
+    Fail corridor-data on unwritable $RELAYS_STATE(.tmp)
+    
+    Work around the absence of a 'set -o pipefail' equivalent in POSIX sh.
+    
+    Fixes #46
+
+commit e400a0317adc6e00d1614782c2b8a066c631e7e5
+Author: Rusty Bird <rustybird@net-c.com>
+Date:   Wed Jan 15 21:34:38 2020 +0000
+
+    Fail corridor-data earlier on process_consensus() failure
+    
+    Terminate the process group immediately if the consensus reader function
+    fails, instead of possibly a few hours later when the next consensus
+    arrives. Use SIGUSR1, which by default terminates without additional
+    actions and is not treated as a successful exit by systemd.
+    
+    #46
+
+commit ff2e95bcace06ec74f35f647f0de4675ff9097c1
+Author: Rusty Bird <rustybird@net-c.com>
+Date:   Wed Jan 15 21:34:36 2020 +0000
+
+    Qubes: Remove R3.2 legacy orderings
+
+commit 4480e0ab3065774bc59471c8494d6e70d827271f
+Author: Rusty Bird <rustybird@net-c.com>
+Date:   Wed Jan 15 21:34:35 2020 +0000
+
+    Qubes: Update qvm-create syntax for R4.0 in README.md
+
+commit f175fa0023801bb3101a9cb2b4a48cc3391dea24
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Dec 12 08:05:29 2019 -0500
+
+    bumped changelog version
+
 commit c6311dd1b43d61b8c142fc602abe5f0d20327581
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Dec 11 15:32:28 2019 -0500
@@ -116,6 +164,46 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Apr 3 18:04:49 2019 -0400
 
     readme
+
+commit f22a19b894c716c478380b4ba68918ac7a8a22f5
+Author: Rusty Bird <rustybird@net-c.com>
+Date:   Thu Sep 6 11:20:36 2018 +0000
+
+    Qubes: Masquerade and log DisposableVMs, too
+
+commit 76523beef0c1682abc0fef06b8bf97a585af0176
+Author: Rusty Bird <rustybird@net-c.com>
+Date:   Thu Sep 6 11:20:35 2018 +0000
+
+    Start out with default ipset hashsize
+
+commit ad38b3eaa03e8908ccc421c02e0d596e163035f4
+Author: Rusty Bird <rustybird@net-c.com>
+Date:   Thu Sep 6 11:20:33 2018 +0000
+
+    Use more readable style for $BRIDGES, $SNAT, and $LOGGED
+    
+    #42
+
+commit 8e2465106c99c6e1a81d00fdb53230876da544b5
+Author: Rusty Bird <rustybird@net-c.com>
+Date:   Thu Sep 6 11:20:31 2018 +0000
+
+    Allow empty lines in $LOGGED
+
+commit 178a311794d69dd11a10d7e0de1d112d9458fb7c
+Author: Rusty Bird <rustybird@net-c.com>
+Date:   Wed Sep 5 20:49:27 2018 +0000
+
+    Remove 20-bridges-auto.conf, add 20-bridges.conf
+    
+    Fixes #42
+
+commit 40ecb5f00412cf976c42d4cbfbd76dfcaa052d0c
+Author: Rusty Bird <rustybird@net-c.com>
+Date:   Wed Sep 5 20:49:25 2018 +0000
+
+    Update copyright year
 
 commit 0538cd02462202d3107248d5fcc75c096a138690
 Author: Patrick Schleizer <adrelanos@riseup.net>
