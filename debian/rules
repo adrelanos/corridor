@@ -10,3 +10,14 @@
 
 override_dh_installchangelogs:
 	dh_installchangelogs changelog.upstream upstream
+
+override_dh_install:
+	make -f Makefile_orig \
+		PREFIX="/usr" \
+		DESTDIR=./debian/tmp \
+		ETC="/etc" \
+		SBIN="/usr/sbin" \
+		SYSTEM="/lib/systemd/system" \
+		MAN="/usr/share/man" \
+		install install-systemd install-qubes
+	dh_install
