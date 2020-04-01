@@ -5,7 +5,7 @@ Source: corridor
 Section: misc
 Priority: optional
 Maintainer: Patrick Schleizer <adrelanos@riseup.net>
-Build-Depends: debhelper (>= 12), genmkfile
+Build-Depends: debhelper (>= 12)
 Homepage: https://github.com/rustybird/corridor
 Vcs-Browser: https://github.com/rustybird/corridor
 Vcs-Git: https://github.com/rustybird/corridor.git
