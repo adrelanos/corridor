@@ -11,7 +11,7 @@
 override_dh_installchangelogs:
 	dh_installchangelogs changelog.upstream upstream
 
-override_dh_install:
+override_dh_auto_install:
 	make -f Makefile \
 		PREFIX="/usr" \
 		DESTDIR=./debian/tmp \
