@@ -17,7 +17,7 @@ make_all() {
 make_install() {
    make_function_run make_get_destdir
 
-   make -f Makefile_orig \
+   make -f Makefile \
       PREFIX="/usr" \
       DESTDIR="$DESTDIR" \
       ETC="/etc" \
