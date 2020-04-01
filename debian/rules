@@ -12,7 +12,7 @@ override_dh_installchangelogs:
 	dh_installchangelogs changelog.upstream upstream
 
 override_dh_install:
-	make -f Makefile_orig \
+	make -f Makefile \
 		PREFIX="/usr" \
 		DESTDIR=./debian/tmp \
 		ETC="/etc" \
