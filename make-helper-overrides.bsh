@@ -29,7 +29,7 @@ make_install() {
 
 make_deb-cleanup_hook_pre() {
    ## Get rid of systemd/corridor-data.service etc.
-   make -f Makefile_orig clean
+   make -f Makefile clean
 }
 
 make_clean_hook_pre() {
