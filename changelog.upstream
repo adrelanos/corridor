@@ -1,3 +1,63 @@
+commit 08bca211d5779c33a73766060e28073601b3ba96
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 2 07:22:25 2020 -0400
+
+    readme
+
+commit b65fe2676f4f77bc3b0430023898cf97d3ab1aa9
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Apr 1 18:59:47 2020 -0400
+
+    packaging fixes for build without genmkfile
+
+commit 131d478ae156da9bca18b7eeda31c99f6d3bf547
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Apr 1 18:48:15 2020 -0400
+
+    Makefile_orig -> Makefile
+
+commit 8450519f9b94cbb49df03d09e8adb07881b70daa
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Apr 1 18:47:34 2020 -0400
+
+    Makefile_orig -> Makefile
+
+commit 1c674f1dfcb29c1e18cb018f5ce623eda617ee39
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Apr 1 18:46:45 2020 -0400
+
+    Makefile_orig -> Makefile
+
+commit 9c214b77c7c4003093ba64069d6db9434270961b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Apr 1 18:46:07 2020 -0400
+
+    fix packaging for no longer using genmkfile
+
+commit 3c9f9e70e6da0eed2783f37984f86a0912efaf65
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Apr 1 16:57:29 2020 -0400
+
+    remove genmkfile
+
+commit 5e21650dfd1b1c888b6ceb1a147ee72ea927c79c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Apr 1 16:30:07 2020 -0400
+
+    add debian install file
+
+commit 8176a70d2801a04356ba3b7cf2e747356d843be1
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Apr 1 15:56:47 2020 -0400
+
+    add man pages (generated using "genmkfile manpages")
+
+commit 01fc0e0ad37a0c137674048b9384e8bc87f070f7
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Apr 1 10:33:49 2020 -0400
+
+    bumped changelog version
+
 commit 9f6482a38d56d456d732c924e99d4cf8347f2d6d
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Apr 1 09:21:31 2020 -0400
