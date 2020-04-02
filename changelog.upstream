@@ -1,3 +1,15 @@
+commit c59196f3d69ae37682da00267fc0f7c787fbaa93
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 2 12:12:29 2020 -0400
+
+    convert to upstream Makefile
+
+commit 227916f47636f7511e8daecbba1a0fffa9673e79
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 2 07:41:02 2020 -0400
+
+    bumped changelog version
+
 commit 08bca211d5779c33a73766060e28073601b3ba96
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Apr 2 07:22:25 2020 -0400
