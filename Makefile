@@ -1,4 +1,4 @@
-PREFIX ?= /usr/local
+PREFIX = /usr/local
 SBIN   = $(PREFIX)/sbin
 SYSTEM = $(PREFIX)/lib/systemd/system
 MAN    = $(PREFIX)/share/man
