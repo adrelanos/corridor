@@ -2,7 +2,7 @@ corridor(8) -- Tor traffic whitelisting gateway
 =============================================
 
 <span class="comment">
-# Copyright (C) 2016 - 2020 ENCRYPTED SUPPORT LP (adrelanos@riseup.net)
+# Copyright (C) 2016 - 2020 ENCRYPTED SUPPORT LP (adrelanos@whonix.org)
 
 # Permission to use, copy, modify, and/or distribute this software for any
 # purpose with or without fee is hereby granted, provided that the above
@@ -128,6 +128,6 @@ Tor Project.
 
 ## AUTHOR
 
-This man page has been written by Patrick Schleizer (adrelanos@riseup.net).
+This man page has been written by Patrick Schleizer (adrelanos@whonix.org).
 
 corridor has been written by Rusty Bird (rustybird@net-c.com).
