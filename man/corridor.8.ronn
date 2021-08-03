@@ -1,7 +1,7 @@
 corridor(8) -- Tor traffic whitelisting gateway
 =============================================
 
-<span class="comment">
+<!--
 # Copyright (C) 2016 - 2021 ENCRYPTED SUPPORT LP (adrelanos@whonix.org)
 
 # Permission to use, copy, modify, and/or distribute this software for any
@@ -15,18 +15,18 @@ corridor(8) -- Tor traffic whitelisting gateway
 # WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 # ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-</span>
+-->
 
-<span class="comment">
+<!--
 # Not using angle brackets in copyright notice for e-mail address, because
 # angle brackets would result in this file being non-deterministic. (There
 # must be a bug in Debian wheezy in ruby-ronn.)
-</span>
+-->
 
-<span class="comment">
+<!--
 # Not using "##", because for some reason this comment would be visible in the
 # resulting man page.
-</span>
+-->
 
 ## SYNOPSIS
 
