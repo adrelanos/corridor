@@ -5,6 +5,9 @@
 
 version_numbers_by_upstream=true
 
+## Symlink based man pages.
+genmkfile_lintian_post_opts+=" --suppress-tags spare-manual-page"
+
 make_helper() {
    echo "Not implemented!" >&2
    exit 1
