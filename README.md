@@ -17,7 +17,7 @@ gateway, not a proxying gateway.
 
 You can think of it as defense in depth for your vanilla Tor Browser or Tails,
 for your beautiful scary experimental Qubes proxying schemes, etc. Or invite
-the hood to use your WiFi without getting into trouble.
+the hood to use your Wi-Fi without getting into trouble.
 ## How to install `corridor` using apt-get ##
 
 1\. Download Whonix's Signing Key.
