@@ -18,6 +18,7 @@ gateway, not a proxying gateway.
 You can think of it as defense in depth for your vanilla Tor Browser or Tails,
 for your beautiful scary experimental Qubes proxying schemes, etc. Or invite
 the hood to use your Wi-Fi without getting into trouble.
+
 ## How to install `corridor` using apt-get ##
 
 1\. Download the APT Signing Key.
@@ -26,7 +27,7 @@ the hood to use your Wi-Fi without getting into trouble.
 wget https://www.whonix.org/derivative.asc
 ```
 
-Users can [check Whonix Signing Key](https://www.whonix.org/wiki/Whonix_Signing_Key) for better security.
+Users can [check Whonix Signing Key](https://www.whonix.org/wiki/Signing_Key) for better security.
 
 2\. Add the APT Signing Key..
 
@@ -60,7 +61,9 @@ Can be build using standard Debian package build tools such as:
 dpkg-buildpackage -b
 ```
 
-See instructions. (Replace `generic-package` with the actual name of this package `corridor`.)
+See instructions.
+
+NOTE: Replace `generic-package` with the actual name of this package `corridor`.
 
 * **A)** [easy](https://www.whonix.org/wiki/Dev/Build_Documentation/generic-package/easy), _OR_
 * **B)** [including verifying software signatures](https://www.whonix.org/wiki/Dev/Build_Documentation/generic-package)
