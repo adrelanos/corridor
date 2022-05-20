@@ -27,7 +27,7 @@ the hood to use your Wi-Fi without getting into trouble.
 wget https://www.whonix.org/derivative.asc
 ```
 
-Users can [check Whonix Signing Key](https://www.whonix.org/wiki/Signing_Key) for better security.
+Users can [check the Signing Key](https://www.whonix.org/wiki/Signing_Key) for better security.
 
 2\. Add the APT Signing Key..
 
