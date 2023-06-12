@@ -1,3 +1,9 @@
+corridor (2:0.11.8.3-1) unstable; urgency=medium
+
+  * New upstream version (local package).
+
+ -- Patrick Schleizer <adrelanos@whonix.org>  Mon, 12 Jun 2023 15:37:49 +0000
+
 corridor (2:0.11.8.2-1) unstable; urgency=medium
 
   * New upstream version (local package).
