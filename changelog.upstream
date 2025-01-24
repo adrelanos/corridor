@@ -1,3 +1,15 @@
+commit 6d736941260977f133d74954cb3d9f92b090ab63
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Jan 24 08:23:57 2025 -0500
+
+    fork version numbers
+
+commit 2ef6b34ee56a8f56c91da18ebc7ece30526f648a
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Jan 24 13:21:32 2025 +0000
+
+    bumped changelog version
+
 commit ed20cea188ea1092fd5f7a120b0b524a9a3339f6
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Thu Jan 23 11:13:52 2025 -0500
