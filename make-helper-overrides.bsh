@@ -3,7 +3,7 @@
 ## Copyright (C) 2012 - 2025 ENCRYPTED SUPPORT LLC <adrelanos@whonix.org>
 ## See the file COPYING for copying conditions.
 
-version_numbers_by_upstream=true
+#version_numbers_by_upstream=true
 
 ## Symlink based man pages.
 genmkfile_lintian_post_opts+=" --suppress-tags spare-manual-page"
