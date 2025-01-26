@@ -1,3 +1,18 @@
+commit 90b5cd278ea369a1cd9b13a21a982c2fe1a685bf
+Merge: 4ad3c05 3952db5
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Jan 26 04:40:09 2025 -0500
+
+    Merge tag 'v0.11.9'
+    
+    version v0.11.9
+
+commit 4ad3c05bc1b1a78df25ff3eb08fdc4d391cd831b
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Jan 24 13:24:40 2025 +0000
+
+    bumped changelog version
+
 commit 6d736941260977f133d74954cb3d9f92b090ab63
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Fri Jan 24 08:23:57 2025 -0500
@@ -27,6 +42,18 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Tue Dec 31 13:26:25 2024 -0500
 
     copyright
+
+commit 3952db5740ad55c0808d82bf72fbaf5d15c20aa4
+Author: Rusty Bird <rustybird@net-c.com>
+Date:   Mon Sep 9 16:25:02 2024 +0000
+
+    Fix corridor-data breakage with recent socat v1.8.0.1
+
+commit ce8c07ed4ccdb7cfb1aa142b43a8cdb9288aeb3e
+Author: Rusty Bird <rustybird@net-c.com>
+Date:   Mon Sep 9 16:25:01 2024 +0000
+
+    Update copyright year
 
 commit 60bab96a39c443f7e548f332a2141424d4266e42
 Author: Patrick Schleizer <adrelanos@whonix.org>
