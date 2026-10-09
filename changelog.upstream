@@ -1,3 +1,15 @@
+commit e135a17081de995dc36a13e70dbe88f03e0df4aa
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Oct 9 05:59:36 2026 -0400
+
+    remove duplicate debhelper token
+
+commit 5ddc11f0c5752c526be0d69dabed7b22df278370
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed May 20 22:32:59 2026 +0000
+
+    bumped changelog version
+
 commit ca64bf2ea2b20b27b4dd6b22e946dbf94dbe4989
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed May 20 16:57:34 2026 -0400
