@@ -19,9 +19,6 @@ if [ "$1" = "purge" ]; then
    rm -r -f "/var/lib/corridor"
 fi
 
-#DEBHELPER#
-
-
 true "INFO: debhelper beginning here."
 
 #DEBHELPER#
